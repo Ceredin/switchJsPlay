@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Playing around with forms and switches in JavaScript.<br /> Input a number between 0-6 (0=Sunday, 6=Saturday) for a corresponding day.</p>
+
+<form id="frm1" action="/action_page.php">
+  Number: <input type="text" name="number" value="1"><br>
+</form> 
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var num;
+var day;
+
+function myFunction(){
+
+num = document.getElementById("frm1").elements[0].value;
+
+  switch (num) {
+      case "0":
+          day = "Sunday";
+          break;
+      case "1":
+          day = "Monday";
+          break;
+      case "2":
+          day = "Tuesday";
+          break;
+      case "3":
+          day = "Wednesday";
+          break;
+      case "4":
+          day = "Thursday";
+          break;
+      case "5":
+          day = "Friday";
+          break;
+      case  "6":
+          day = "Saturday";
+      default:
+      	  day = "not a real.";
+  }
+
+  document.getElementById("demo").innerHTML = "The day is " + day;
+}
+</script>
+
+</body>
+</html>
